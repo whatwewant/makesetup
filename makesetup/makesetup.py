@@ -46,7 +46,7 @@ def make():
 
     home_page = cin('Home Page: ')
     license = cin('License: ', 'Apache 2.0')
-    is_console_scripts = cin('Is Console Scripts ? (y|N): ', 'n')
+    is_console_scripts = cin('Is Console Scripts ?(If yes, make sure proj_dir.__init__.py has a function named `main`) (y|N): ', 'n')
     # summary = cin('Summary: ')
     # keywords = cin('Keywords: ')
     # platform = cin('Platform: ', 'Linux/Unix')
@@ -75,10 +75,10 @@ def make():
     ##
 
     with open(joinpath(proj_path, 'README.rst'), 'w') as fp:
-        fp.write('Project: %s \n -----------------------\n' % proj_name)
+        fp.write('Project: %s \n-----------------------\n' % proj_name)
 
     with open(joinpath(proj_path, 'HISTORY.rst'), 'w') as fp:
-        fp.write('Project History: %s \n -----------------------\n' % proj_name)
+        fp.write('Project History: %s \n-----------------------\n' % proj_name)
 
     with open(joinpath(proj_path, 'setup.py'), 'w') as fp:
         # base
