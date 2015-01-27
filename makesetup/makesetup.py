@@ -35,9 +35,14 @@ def make():
         sys.exit(-1)
 
     # 1
-    proj_path = cin('\nProject Path: ', CURRENT_PATH)
+    proj_path = cin('\nProject Path(Default: %s): ' % CURRENT_PATH,
+                    CURRENT_PATH)
     proj_name = cin('Project Name: ', None)
+    while not proj_name:
+        proj_name = cin('Project Name Cannot Be Empty: ', None)
     proj_dir = cin('Project Dir: ', None)
+    while not proj_dir:
+        proj_dir = cin('Project Dir Cannot Be Empty: ', None)
     version = cin('Version: ', '0.0.1')
     description = cin('Description: ')
     author = cin('Author: ')
