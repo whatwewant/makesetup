@@ -27,7 +27,7 @@ except :
 
 setup(
     name = 'makesetup',
-    version = '0.0.1',
+    version = '0.0.2',
     description = 'Simply Python Setup',
     long_description = readme + history,
     author = 'Cole Smith',
@@ -40,6 +40,6 @@ setup(
     license = "Apache 2.0",
     zip_safe = False,
     classifiers = ('Development Status :: 5 - Production/Stable', 'Intended Audience :: Developers', 'Natural Language :: English', 'License :: OSI Approved :: Apache Software License', 'Programming Language :: Python', 'Programming Language :: Python :: 2.6', 'Programming Language :: Python :: 2.7', 'Programming Language :: Python :: 3', 'Programming Language :: Python :: 3.3', 'Programming Language :: Python :: 3.4'),
-    entry_points = {"console_scripts": ["makesetup = makesetup.__main__:main"]},
+    entry_points = {"console_scripts": ["makesetup = makesetup.__init__:main"]},
 
 )

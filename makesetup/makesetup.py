@@ -46,6 +46,7 @@ def make():
 
     home_page = cin('Home Page: ')
     license = cin('License: ', 'Apache 2.0')
+    is_console_scripts = cin('Is Console Scripts ? (y|N): ', 'n')
     # summary = cin('Summary: ')
     # keywords = cin('Keywords: ')
     # platform = cin('Platform: ', 'Linux/Unix')
@@ -125,7 +126,8 @@ except :
         fp.write('    license = "%s",\n' % license)
         fp.write('    zip_safe = False,\n')
         fp.write('    classifiers = %s,\n' % str(classifiers))
-        fp.write('    entry_points = {"console_scripts": ["%s = %s.__main__:main"]},\n' % (proj_name, proj_name))
+        if is_console_scripts.lower() in ['y', 'yes']:
+            fp.write('    entry_points = {"console_scripts": ["%s = %s:main"]},\n' % (proj_name, proj_name))
 
         # Package Info End
         fp.write('\n)\n')
