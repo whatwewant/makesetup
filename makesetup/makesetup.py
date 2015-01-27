@@ -122,7 +122,7 @@ except :
         fp.write('    description = \'%s\',\n' % description)
         fp.write('    long_description = readme + history,\n')
         fp.write('    author = \'%s\',\n' % author)
-        fp.write('    author_eamil = \'%s\',\n' % author_email)
+        fp.write('    author_email = \'%s\',\n' % author_email)
         fp.write('    url = \'%s\',\n' % home_page)
         fp.write('    packages = %s,\n' % proj_name.split(','))
         fp.write('    package_dir = {"%s": "%s"},\n' % (proj_name, proj_dir))
