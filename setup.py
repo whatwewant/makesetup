@@ -27,7 +27,7 @@ except :
 
 setup(
     name = 'makesetup',
-    version = '0.0.3',
+    version = '0.0.4',
     description = 'Simply Python Setup',
     long_description = readme + history,
     author = 'Cole Smith',

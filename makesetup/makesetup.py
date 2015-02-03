@@ -48,6 +48,7 @@ def make():
     author = cin('Author: ')
     author_email = cin('Author Email: ')
     requires = cin('Requires (separate with ","): ').split(',')
+    data_directories = cin('Data Directories (separate with ","): ').split(',')
 
     home_page = cin('Home Page: ')
     license = cin('License: ', 'Apache 2.0')
@@ -84,6 +85,10 @@ def make():
 
     with open(joinpath(proj_path, 'HISTORY.rst'), 'w') as fp:
         fp.write('Project History: %s \n-----------------------\n' % proj_name)
+
+    with open(joinpath(proj_path, 'MANIFEST.in'), 'w') as fp:
+        for each in data_directories:
+            fp.write('include %s\n' % os.path.join(each, '*'))
 
     with open(joinpath(proj_path, 'setup.py'), 'w') as fp:
         # base
